@@ -5,7 +5,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="163dp"
         android:layout_weight="1"
         android:orientation="horizontal">
 
@@ -18,7 +18,7 @@
 
         <LinearLayout
             android:layout_width="198dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
 
@@ -43,56 +43,4 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/icon3"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:scaleType="fitCenter" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/storeName"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="storeName" />
-
-        <TextView
-            android:id="@+id/storeAdress"
-            android:layout_width="match_parent"
-            android:layout_height="33dp"
-            android:text="storeAdress" />
-
-        <TextView
-            android:id="@+id/storeWebsite"
-            android:layout_width="match_parent"
-            android:layout_height="32dp"
-            android:text="storeWebsite" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/storeName2"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_weight="1"
-        android:text="storeName" />
-
-    <TextView
-        android:id="@+id/storeAdress2"
-        android:layout_width="match_parent"
-        android:layout_height="33dp"
-        android:layout_weight="1"
-        android:text="storeAdress" />
-
-    <TextView
-        android:id="@+id/storeWebsite2"
-        android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:layout_weight="1"
-        android:text="storeWebsite" />
 </LinearLayout>
