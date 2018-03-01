@@ -22,8 +22,8 @@ public class ProductListActvity extends AppCompatActivity {
             listAdapter = new ShoppingCursorAdapter(this,
                     R.layout.product_list_item,
                     cursor,
-                    new String[]{"NAME"},
-                    new int[]{R.id.text},
+                    new String[]{"NAME", "PRICE", "QUANTITY"},
+                    new int[]{R.id.productName, R.id.productPrice, R.id.productQuantity},
                     0);
             listDrinks.setAdapter(listAdapter);
         } catch (SQLiteException e) {

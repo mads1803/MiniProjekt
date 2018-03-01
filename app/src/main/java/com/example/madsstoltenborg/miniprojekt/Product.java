@@ -9,16 +9,18 @@ public class Product {
     private String name;
     private String quantity;
 
-    public Product(String name, String quantity) {
-        this(-1, name, quantity);
+
+
+    private double price;
+
+    public Product(String name, double price, String quantity) {
+        this(-1, name, price, quantity);
 
     }
 
-    public long getId() {
-        return id;
-    }
 
-    public Product(long id, String name, String quantity) {
+
+    public Product(long id, String name, double price, String quantity) {
         this.id = id;
         this.name = name;
         this.quantity = quantity;
@@ -41,4 +43,17 @@ public class Product {
     public void setQuantity(String quantity) {
         this.quantity = quantity;
     }
+
+    public long getId() {
+        return id;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
 }

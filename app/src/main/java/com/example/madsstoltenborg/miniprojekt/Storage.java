@@ -24,16 +24,17 @@ public class Storage {
     public Product getProduct(long id) {
         SQLiteDatabase db = shoppingDatabaseHelper.getReadableDatabase();
         Cursor cursor = db.query("PRODUCT",
-                new String[]{"_id", "NAME", "QUANTITY"},
+                new String[]{"_id", "NAME", "PRICE", "QUANTITY"},
                 "_id = ?",
                 new String[]{"" + id},
                 null, null, null);
         if (cursor.moveToFirst()) {
             String nameText = cursor.getString(cursor.getColumnIndex("NAME"));
+            double priceText = (Double.parseDouble(cursor.getString(cursor.getColumnIndex("PRICE"))));
             String quantityText = cursor.getString(cursor.getColumnIndex("QUANTITY"));
 
             cursor.close();
-            return new Product(id, nameText, quantityText);
+            return new Product(id, nameText, priceText, quantityText);
 
         } else {
             cursor.close();
@@ -59,9 +60,9 @@ public class Storage {
     //TODO: QUANTITY --> Volume
     private void initStorage() {
         if (getProducts().getCount() == 0) {
-            addProduct(new Product("Mælk", "1 L"));
-            addProduct(new Product("Kage", "500 g"));
-            addProduct(new Product("Filter", "50 stk."));
+            addProduct(new Product("Mælk", 200,"1 L"));
+            addProduct(new Product("Kage", 5,"500 g"));
+            addProduct(new Product("Filter", 12,"50 stk."));
         }
     }
 

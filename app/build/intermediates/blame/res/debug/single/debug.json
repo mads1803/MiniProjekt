@@ -776,6 +776,10 @@
         "source": "C:\\Users\\Mads Stoltenborg\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\3d712a6b09a8edcc0cd358929e941f42\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
+        "merged": "C:\\Users\\Mads Stoltenborg\\AndroidStudioProjects\\MiniProjekt\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_product.xml.flat",
+        "source": "C:\\Users\\Mads Stoltenborg\\AndroidStudioProjects\\MiniProjekt\\app\\src\\main\\res\\layout\\activity_product.xml"
+    },
+    {
         "merged": "C:\\Users\\Mads Stoltenborg\\AndroidStudioProjects\\MiniProjekt\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tooltip_frame_dark.xml.flat",
         "source": "C:\\Users\\Mads Stoltenborg\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\3d712a6b09a8edcc0cd358929e941f42\\res\\drawable\\tooltip_frame_dark.xml"
     },

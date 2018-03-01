@@ -16,8 +16,9 @@ public class ShoppingWrapper extends CursorWrapper {
     public Product getProduct() {
         long id = getLong(getColumnIndex("_id"));
         String nameText = getString(getColumnIndex("NAME"));
+        double priceText = (Double.parseDouble(getString(getColumnIndex("PRICE"))));
         String quantityText = getString(getColumnIndex("QUANTITY"));
-        return new Product(id, nameText, quantityText);
+        return new Product(id, nameText, priceText, quantityText);
     }
 }
 

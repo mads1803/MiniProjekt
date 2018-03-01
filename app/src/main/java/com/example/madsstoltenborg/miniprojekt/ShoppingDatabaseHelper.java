@@ -46,6 +46,7 @@ public class ShoppingDatabaseHelper extends SQLiteOpenHelper {
         if (oldVersion < 1) {
             db.execSQL("CREATE TABLE PRODUCT (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
                     + "NAME TEXT, "
+                    + "PRICE TEXT, "
                     + "QUANTITY TEXT);");
 
             db.execSQL("CREATE TABLE SHOP (_id INTEGER PRIMARY KEY AUTOINCREMENT, "

@@ -5,7 +5,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="211dp"
         android:layout_weight="1"
         android:orientation="horizontal">
 
@@ -23,22 +23,28 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/storeName"
+                android:id="@+id/productName"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:text="storeName" />
+                android:text="productName" />
 
             <TextView
-                android:id="@+id/storeAdress"
+                android:id="@+id/productPrice"
                 android:layout_width="match_parent"
                 android:layout_height="33dp"
-                android:text="storeAdress" />
+                android:text="productPrice" />
 
             <TextView
-                android:id="@+id/storeWebsite"
+                android:id="@+id/productQuantity"
                 android:layout_width="match_parent"
                 android:layout_height="32dp"
-                android:text="storeWebsite" />
+                android:text="productQuantity" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="132dp"
+                android:layout_weight="1"
+                android:text="HEJ HEJ HEJ HEJ HEJ" />
         </LinearLayout>
 
     </LinearLayout>
