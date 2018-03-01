@@ -36,7 +36,7 @@ public class ShoppingCursorAdapter extends SimpleCursorAdapter {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, R.string.item_clicked, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Clicked", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(context, DrinkActivity.class);
                 intent.putExtra(DrinkActivity.EXTRA_DRINKID, (int) id);
                 context.startActivity(intent);
