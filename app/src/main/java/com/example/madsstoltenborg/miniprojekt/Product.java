@@ -14,6 +14,10 @@ public class Product {
 
     }
 
+    public long getId() {
+        return id;
+    }
+
     public Product(long id, String name, String quantity) {
         this.id = id;
         this.name = name;

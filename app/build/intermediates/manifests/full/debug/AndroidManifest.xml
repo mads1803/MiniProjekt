@@ -26,6 +26,7 @@
         <activity android:name="com.example.madsstoltenborg.miniprojekt.ShopListActivity" />
         <activity android:name="com.example.madsstoltenborg.miniprojekt.ProductListActvity" />
         <activity android:name="com.example.madsstoltenborg.miniprojekt.GroceryListActivity" />
+        <activity android:name="com.example.madsstoltenborg.miniprojekt.ProductActivity" />
 
         <meta-data
             android:name="android.support.VERSION"
