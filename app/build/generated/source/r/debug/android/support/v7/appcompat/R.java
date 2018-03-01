@@ -734,11 +734,11 @@ public final class R {
         public static final int notification_template_media_custom = 0x7f09002b;
         public static final int notification_template_part_chronometer = 0x7f09002c;
         public static final int notification_template_part_time = 0x7f09002d;
-        public static final int select_dialog_item_material = 0x7f09002e;
-        public static final int select_dialog_multichoice_material = 0x7f09002f;
-        public static final int select_dialog_singlechoice_material = 0x7f090030;
-        public static final int support_simple_spinner_dropdown_item = 0x7f090031;
-        public static final int tooltip = 0x7f090032;
+        public static final int select_dialog_item_material = 0x7f09002f;
+        public static final int select_dialog_multichoice_material = 0x7f090030;
+        public static final int select_dialog_singlechoice_material = 0x7f090031;
+        public static final int support_simple_spinner_dropdown_item = 0x7f090033;
+        public static final int tooltip = 0x7f090034;
     }
     public static final class string {
         public static final int abc_action_bar_home_description = 0x7f0b0000;
