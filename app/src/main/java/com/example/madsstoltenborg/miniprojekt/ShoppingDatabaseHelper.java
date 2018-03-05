@@ -68,7 +68,7 @@ public class ShoppingDatabaseHelper extends SQLiteOpenHelper {
                     + "NAME TEXT);");
 
             //Oprettelse af tabel til varer til grocerylists
-            //TODO evt en boolean til valgt/købt
+            //TODO evt en boolean til valgt/købt eller lignende
             db.execSQL("CREATE TABLE GROCERYLISTS_PRODUCTS (_id INTEGER PRIMARY KEY AUTOINCREMENT,"
                     + "GROCERYLISTS_ID INTEGER, "
                     + "SHOP_PRODUCTS_ID INTEGER, "
@@ -76,8 +76,8 @@ public class ShoppingDatabaseHelper extends SQLiteOpenHelper {
 
 
 
-            //TODO view til shopproduts
-            //TODO view grocerylistproduct view
+            //TODO view til shopproduts med where klausuler
+            //TODO view grocerylistproduct view med where klausuler
 
             //TODO Havde vi ikke droppet priceline?
             db.execSQL("CREATE TABLE PRICELINE (_id INTEGER PRIMARY KEY AUTOINCREMENT, "

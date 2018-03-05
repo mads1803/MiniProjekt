@@ -26,7 +26,7 @@ public class Storage {
     }
 
 
-    //TODO Product
+    //TODO Product - kig igen her
     public Product getProduct(long id) {
         SQLiteDatabase db = shoppingDatabaseHelper.getReadableDatabase();
         Cursor cursor = db.query("PRODUCT",
@@ -56,12 +56,18 @@ public class Storage {
         return new ShoppingWrapper(cursor);
     }
 
+
     public long addProduct(Product product) {
         SQLiteDatabase db = shoppingDatabaseHelper.getWritableDatabase();
         ContentValues productValues = new ContentValues();
         productValues.put("NAME", product.getName());
         productValues.put("VOLUME", product.getQuantity());
         return db.insert("PRODUCT", null, productValues);
+    }
+
+    public boolean deleteProduct(long id) {
+        SQLiteDatabase db = shoppingDatabaseHelper.getWritableDatabase();
+        return db.delete("PRODUCTS", "_id = " + id, null)>0;
     }
 
     //TODO CRUD shop
@@ -73,14 +79,29 @@ public class Storage {
         shopValues.put("WEBSITE", website);
         db.insert("SHOP", null, shopValues);
     }
+ //alle
     public Cursor getShops()
     {
         SQLiteDatabase db = shoppingDatabaseHelper.getReadableDatabase();
         return db.query("SHOP", new String[]{"_id", "NAME", "ADDRESS", "WEBSITE"},
                 null, null, null, null, null, null);
     }
+    // én
+    public Cursor getShop(long id)
+    {
+        SQLiteDatabase db = shoppingDatabaseHelper.getReadableDatabase();
+        return db.query("SHOP", new String[]{"_id", "NAME", "ADDRESS", "WEBSITE"},
+                null, null, null, null, null, null);
+    }
+
+    public boolean deleteShop(long id)
+    {
+        SQLiteDatabase db = shoppingDatabaseHelper.getReadableDatabase();
+        return db.delete("SHOP", "_id = " + id, null) >0;
+    }
 
 //TODO smide produkter på butikker
+
     public void insertProductsIntoShop(int product_id, int shop_id, double price){
 SQLiteDatabase db = shoppingDatabaseHelper.getWritableDatabase();
 ContentValues shopProductValues = new ContentValues();
