@@ -76,14 +76,14 @@ public class ShoppingDatabaseHelper extends SQLiteOpenHelper {
 
 
 
-            //TODO view til shopproduts med where klausuler
-            //TODO view grocerylistproduct view med where klausuler
+            //TODO view til shopproduts med from where klausuler
+            //TODO view grocerylistproduct view med from where klausuler
 
-            //TODO Havde vi ikke droppet priceline?
-            db.execSQL("CREATE TABLE PRICELINE (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
-                    + "PRODUKTID INTEGER, "
-                    + "SHOPID INTERGER, "
-                    + "PRICE FLOAT);");
+//            //TODO Havde vi ikke droppet priceline?
+//            db.execSQL("CREATE TABLE PRICELINE (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
+//                    + "PRODUKTID INTEGER, "
+//                    + "SHOPID INTERGER, "
+//                    + "PRICE FLOAT);");
 
 
         }

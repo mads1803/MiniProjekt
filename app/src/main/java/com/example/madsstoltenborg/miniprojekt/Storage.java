@@ -26,7 +26,7 @@ public class Storage {
     }
 
 
-    //TODO Product - kig igen her
+    //TODO Product - kig igen her tror de kan laves mere simpel
     public Product getProduct(long id) {
         SQLiteDatabase db = shoppingDatabaseHelper.getReadableDatabase();
         Cursor cursor = db.query("PRODUCT",
@@ -130,10 +130,32 @@ return db.delete("GROCERYLISTS", "_id = " + id, null) > 0;
     //TODO: QUANTITY --> Volume
     // INIT dummy data
     private void initStorage() {
+        SQLiteDatabase db = shoppingDatabaseHelper.getReadableDatabase();
+        Cursor cursor;
+        //= db.rawQuery("SELECT * FROM SHOPS", null);
+
         if (getProducts().getCount() == 0) {
             addProduct(new Product("Mælk", 200,"1 L"));
             addProduct(new Product("Kage", 5,"500 g"));
             addProduct(new Product("Filter", 12,"50 stk."));
+        }
+
+        if(getShops().getCount() == 0){
+            addShop("Rema 1000", "Møllevangs 10, 8210", "www.rema.dk");
+            addShop("Kvickly", "aabyhojvej 19, 8210", "www.kvickly.dk");
+            addShop("Bilka", "bilkavej 10, 8000","www.bilka.dk" );
+        }
+        cursor = db.rawQuery("SELECT * FROM SHOP_PRODUCTS", null);
+        if(cursor.getCount() == 0){
+            insertProductsIntoShop(1, 1, 10);
+            insertProductsIntoShop(2, 2, 5);
+            insertProductsIntoShop(3, 3, 15);
+        }
+
+        cursor = db.rawQuery("SELECT * FROM GROCERYLISTS", null);
+        if (cursor.getCount() == 0) {
+            insertGroceryList("Indkøbsliste 1");
+            insertGroceryList("Indkøbsliste 2");
         }
     }
 
