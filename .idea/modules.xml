@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MiniProjekt.iml" filepath="$PROJECT_DIR$/MiniProjekt.iml" />
+      <module fileurl="file://C:\Users\simon\Desktop\Semester4\Android\Lektion6\RepoMedSource\MiniProjekt.iml" filepath="C:\Users\simon\Desktop\Semester4\Android\Lektion6\RepoMedSource\MiniProjekt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RepoMedSource.iml" filepath="$PROJECT_DIR$/RepoMedSource.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

@@ -44,16 +44,40 @@ public class ShoppingDatabaseHelper extends SQLiteOpenHelper {
 
     private void updateMyDatabase(SQLiteDatabase db, int oldVersion, int newVersion) {
         if (oldVersion < 1) {
-            db.execSQL("CREATE TABLE PRODUCT (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
-                    + "NAME TEXT, "
-                    + "PRICE TEXT, "
-                    + "QUANTITY TEXT);");
 
+            //Oprettelse af butiksvarer
             db.execSQL("CREATE TABLE SHOP (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
                     + "NAME TEXT, "
                     + "ADRESS TEXT, "
                     + "WEBSITE TEXT);");
 
+            //Oprettelse af produkter TODO Droppe price her ?
+            db.execSQL("CREATE TABLE PRODUCT (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                    + "NAME TEXT, "
+                    + "PRICE TEXT, "
+                    + "VOLUME TEXT);");
+
+            //Oprettelse af tabel til butiksprodukter + binding
+            db.execSQL("CREATE TABLE SHOP_PRODUCTS (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                    + "SHOP_ID INTEGER, "
+                    + "PRODUCT_ID INTEGER,"
+                    + "PRICE NUMERIC);");
+
+            //Oprettelse af tabel til grocerylists
+            db.execSQL("CREATE TABLE GROCERYLISTS (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                    + "NAME TEXT);");
+
+            //Oprettelse af tabel til varer til grocerylists
+            //TODO evt en boolean til valgt/købt
+            db.execSQL("CREATE TABLE GROCERYLISTS_PRODUCTS (_id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                    + "GROCERYLISTS_ID INTEGER, "
+                    + "SHOP_PRODUCTS_ID INTEGER, "
+                    + "QUANTITY INTEGER);");
+
+            //TODO view til shopproduts
+            //TODO view grocerylistproduct view
+
+            //TODO Havde vi ikke droppet priceline?
             db.execSQL("CREATE TABLE PRICELINE (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
                     + "PRODUKTID INTEGER, "
                     + "SHOPID INTERGER, "

@@ -7,10 +7,10 @@ package com.example.madsstoltenborg.miniprojekt;
 public class Product {
     private long id;
     private String name;
-    private String quantity;
+    private String volume;
 
 
-
+//todo har ændret til volume
     private double price;
 
     public Product(String name, double price, String quantity) {
@@ -20,10 +20,10 @@ public class Product {
 
 
 
-    public Product(long id, String name, double price, String quantity) {
+    public Product(long id, String name, double price, String volume) {
         this.id = id;
         this.name = name;
-        this.quantity = quantity;
+        this.volume = volume;
 
     }
 
@@ -37,11 +37,11 @@ public class Product {
     }
 
     public String getQuantity() {
-        return quantity;
+        return volume;
     }
 
     public void setQuantity(String quantity) {
-        this.quantity = quantity;
+        this.volume = volume;
     }
 
     public long getId() {
