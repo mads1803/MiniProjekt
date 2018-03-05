@@ -48,7 +48,7 @@ public class ShoppingDatabaseHelper extends SQLiteOpenHelper {
             //Oprettelse af butiksvarer
             db.execSQL("CREATE TABLE SHOP (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
                     + "NAME TEXT, "
-                    + "ADRESS TEXT, "
+                    + "ADDRESS TEXT, "
                     + "WEBSITE TEXT);");
 
             //Oprettelse af produkter TODO Droppe price her ?
@@ -73,6 +73,8 @@ public class ShoppingDatabaseHelper extends SQLiteOpenHelper {
                     + "GROCERYLISTS_ID INTEGER, "
                     + "SHOP_PRODUCTS_ID INTEGER, "
                     + "QUANTITY INTEGER);");
+
+
 
             //TODO view til shopproduts
             //TODO view grocerylistproduct view
