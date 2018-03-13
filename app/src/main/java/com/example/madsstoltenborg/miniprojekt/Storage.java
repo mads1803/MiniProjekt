@@ -96,7 +96,7 @@ public class Storage {
 
     public boolean deleteShop(long id)
     {
-        SQLiteDatabase db = shoppingDatabaseHelper.getReadableDatabase();
+        SQLiteDatabase db = shoppingDatabaseHelper.getWritableDatabase();
         return db.delete("SHOP", "_id = " + id, null) >0;
     }
 
