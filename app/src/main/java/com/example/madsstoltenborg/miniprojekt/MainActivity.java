@@ -6,14 +6,27 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
+
 
 public class MainActivity extends AppCompatActivity {
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Create an OnItemClickListener
+         Storage storage = Storage.getInstance();
+         storage.getProducts();
+
+         TextView textView = findViewById(R.id.testFelt);
+         textView.setText(storage.getProduct(0).getName());
+        //Create an OnItemClickListeners
+
+
         AdapterView.OnItemClickListener itemClickListener =
                 new AdapterView.OnItemClickListener(){
                     @Override
