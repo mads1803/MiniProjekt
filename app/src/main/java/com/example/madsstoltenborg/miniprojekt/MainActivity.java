@@ -11,19 +11,19 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ShoppingDatabaseHelper db = new ShoppingDatabaseHelper(this);
+
+
          Storage storage = Storage.getInstance();
          storage.getProducts();
 
          TextView textView = findViewById(R.id.testFelt);
-         textView.setText(storage.getProduct(0).getName());
+       //  textView.setText(storage.getProduct(0).getName());
         //Create an OnItemClickListeners
 
 

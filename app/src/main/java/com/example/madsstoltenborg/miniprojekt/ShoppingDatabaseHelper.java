@@ -19,9 +19,9 @@ public class ShoppingDatabaseHelper extends SQLiteOpenHelper {
         applicationContext = context.getApplicationContext();
     }
 
-    private static ShoppingDatabaseHelper shoppingDatabaseHelper;
+    public static ShoppingDatabaseHelper shoppingDatabaseHelper;
 
-    private ShoppingDatabaseHelper(Context context) {
+    public ShoppingDatabaseHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
 

@@ -130,17 +130,17 @@ return db.delete("GROCERYLISTS", "_id = " + id, null) > 0;
     //TODO: QUANTITY --> Volume
     // INIT dummy data
     private void initStorage() {
-        SQLiteDatabase db = shoppingDatabaseHelper.getReadableDatabase();
+        //SQLiteDatabase db = shoppingDatabaseHelper.getReadableDatabase();
         Cursor cursor;
         //= db.rawQuery("SELECT * FROM SHOPS", null);
 
         if (getProducts().getCount() == 0) {
-            addProduct(new Product("Mælk", 200,"1 L"));
-            addProduct(new Product("Kage", 5,"500 g"));
-            addProduct(new Product("Filter", 12,"50 stk."));
+            addProduct(new Product("Mælk", 200, "1 L"));
+            addProduct(new Product("Kage", 5, "500 g"));
+            addProduct(new Product("Filter", 12, "50 stk."));
         }
 
-        if(getShops().getCount() == 0){
+      /*  if(getShops().getCount() == 0){
             addShop("Rema 1000", "Møllevangs 10, 8210", "www.rema.dk");
             addShop("Kvickly", "aabyhojvej 19, 8210", "www.kvickly.dk");
             addShop("Bilka", "bilkavej 10, 8000","www.bilka.dk" );
@@ -157,6 +157,6 @@ return db.delete("GROCERYLISTS", "_id = " + id, null) > 0;
             insertGroceryList("Indkøbsliste 1");
             insertGroceryList("Indkøbsliste 2");
         }
+    }*/
     }
-
 }
